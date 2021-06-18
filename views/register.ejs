@@ -1,0 +1,115 @@
+
+<% include ./partials/header %>
+
+<h1>Sign Up!</h1>
+<!--<form  action="/register" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="number" name="mobile" placeholder="mobile no">
+    <input type="password" name="password" placeholder="password">
+    <button>login</button> -->
+
+    <form action="/register" method="post"  class="form-horizontal">
+   
+    
+        
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Name">userame</label>  
+            <div class="col-md-5">
+            
+                <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required=""> 
+            </div>
+          </div>
+           <!-- Multiple Radios (inline) -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="martial">Martial status</label>
+              <div class="col-md-4"> 
+                <label class="radio-inline" for="martial-0">
+                  <input type="radio" name="martial" id="martial-0" value="Married" checked="checked">
+                  Yes
+                </label> 
+                <label class="radio-inline" for="martial-1">
+                  <input type="radio" name="martial" id="martial-1" value="Unmarried"> No
+                </label>
+              </div>
+            </div>
+            
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="mobilenumber">Mobile Number</label>  
+              <div class="col-md-4">
+              <input id="mobilenumber" name="mobile" type="text" placeholder="Mobile Number" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="emailId">Email Id</label>  
+              <div class="col-md-4">
+              <input id="emailId" name="emailId" type="text" placeholder="user@gmail.com" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            <!-- Text input for Aadhar number-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Aadhar">Aadhar Number</label>  
+              <div class="col-md-4">
+              <input id="Aadhar" name="aadhar" type="text" placeholder="Aadhar Number" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            <!-- Education Qualification -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Qualification">Qualification</label>
+              <div class="col-md-2">
+                <select id="Qualification" name="Qualification" class="form-control">
+                  <option value="Below">Below 8th</option>
+                  <option value="Matric">Matriculation(10th)</option>
+                  <option value="Intermidate">Intermidate(12th)</option>
+                  <option value="UG">Graduate</option>
+                  <option value="PG">Post graduate</option>
+                </select>
+              </div>
+            </div>
+            <!-- Skills -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="skill">Skills</label>
+              <div class="col-md-2">
+                <select id="Skill" name="Skill" class="form-control">
+                  <option value="Computer">Computer</option>
+                  <option value="Knitting">Kniting</option>
+                   <option value="Sewing">Sewing</option>
+                    <option value="Cooking">Cooking</option>
+                     <option value="Crafting">Crafting</option>
+                      <option value="Teaching">Teaching</option>
+                  <option value="Painting">Painting</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+            </div>
+            <!-- Password input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="passwordinput">Password</label>
+              <div class="col-md-5">
+                <input id="passwordinput" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+                <span class="help-block">max 16 characters</span>
+              </div>
+            </div>
+            
+            
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            
+      </fieldset>
+           
+       
+        
+   <!-- </form>-->
+</form>
+<% include partials/footer %>

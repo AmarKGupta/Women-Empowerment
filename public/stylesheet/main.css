@@ -1,0 +1,21 @@
+body {
+    background: #dde6df;
+} 
+
+.img-thumbnail img{
+    
+    width: 60%;
+} 
+
+.img-thumbnail{
+    
+    padding: 0;
+}
+
+.img-thumbnail .caption-full{
+    padding : 9px;
+}
+.navbar{
+    margin-bottom:2em;
+}
+

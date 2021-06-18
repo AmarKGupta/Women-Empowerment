@@ -1,0 +1,47 @@
+<% include ./partials/header %>
+<% if(!currentUser||currentUser.length==0){ %>
+         
+  <li class="nav-item ">
+    <a class="nav-link" href="/login">Login</a>
+ </li>
+ <li class="nav-item">
+    <a class="nav-link" href="/register">Sign Up</a>
+ </li>
+<% } else { %>
+  <!----<li class="nav-item ">
+     <h1> Username: <%= currentUser.username %></h1>
+    </li>
+  
+  <li class="nav-item ">
+    <a class="nav-link" href="/logout"> Logout</a>
+  </li>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <!--<div class="card">
+            <h1><%= currentUser.username %></h1>
+            <p class="title"><%= currentUser.emailId %></p>
+            <p><%= currentUser.mobile %></p>
+            <p><%= currentUser.Qualification %></p>
+            <p><button><%= currentUser.Skill %></button></p>
+          </div>-->
+          
+          <h3 style="text-decoration:underline; text-align:center ; ">PERSONAL DETAILS</h3>
+
+
+<div style="text-align: center; font-size:30px; margin-top: 3em; border: black;">
+
+<p>Username : <%= currentUser.username %> </p>
+<p>Aadhar Card No : <%= currentUser.aadhar %></p>
+<p>Email ID : <%= currentUser.emailId %></p>
+<p>Mobile No : <%= currentUser.mobile %> </p>
+<p>Marital Status : <%= currentUser.martial %></p>
+<p>Qualification : <%= currentUser.Qualification %> </p>
+<p>Skills : <%= currentUser.Skill %></p>
+</div>
+
+</div>
+  
+<% } %>
+
+
+  <% include ./partials/footer %>

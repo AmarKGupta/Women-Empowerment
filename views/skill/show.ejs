@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+   
+   <a class="header item"><i class="code icon"></i>Blog site</a>
+   <a href="/" class="item">Home</a>
+   <a href="/indexskill/new" class="item">New Post</a>
+   </div>
+</div>
+<div class="ui main text container segment">
+  <div class="ui huge header"><%=skill.title %></div>
+     <div class="ui top attached">
+        <div class="item">
+         
+         <iframe width="720" height="360" class="ui centred rounded image" 
+         src="<%= skill.video %>">
+        </iframe>
+           <div class="content">
+             <span><%=skill.created %></span>  
+            
+           </div>
+            
+            <div class="description">
+             <p><%-skill.body %></p>
+            </div>
+             <a class="ui green basic button" href="/indexskill/<%= skill._id %>/edit">Edit</a>
+            <form id="delete" action="/indexskill/<%= skill._id %>?_method=DELETE" method="POST">
+            
+             <button class="ui red basic button">Delete</button>
+            </form>
+           
+         
+         </div>
+      
+     </div>
+    
+  </div>
+
+<% include ../partials/footer %>

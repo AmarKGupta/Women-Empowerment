@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+   
+   <a class="header item"><i class="code icon"></i>Blog site</a>
+   <a href="/" class="item">Home</a>
+   <a href="/indexlaw/new" class="item">New Post</a>
+   </div>
+</div>
+<div class="ui main text container segment">
+  <div class="ui huge header"><%=law.title %></div>
+     <div class="ui top attached">
+        <div class="item">
+         
+           <div class="content">
+             <span><%=law.created %></span>  
+            
+           </div>
+            
+            <div class="description">
+             <p><%-law.body %></p>
+            </div>
+             <a class="ui green basic button" href="/indexlaw/<%= law._id %>/edit">Edit</a>
+            <form id="delete" action="/indexlaw/<%= law._id %>?_method=DELETE" method="POST">
+            
+             <button class="ui red basic button">Delete</button>
+            </form>
+           
+         
+         </div>
+      
+     </div>
+    
+  </div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Skill Video</div>
+   
+    <form class="ui form" action="/indexskill" method="POST">
+        <div class="field">
+        <label>Title</label>
+        <input type="text" name="skill[title]" placeholder="title">    
+        </div> 
+        <div class="field">
+          <label>Video</label>
+           <input type="text" name="skill[video]" placeholder="video embed url">
+          </div>
+        <div class="field">
+        <label>Skill Content</label>
+        <textarea name="skill[body]"></textarea>
+        </div>
+        <button class="ui blue  basic button">
+        <i class="icon upload"></i> Post</button>
+        <button class="ui green   basic button">
+          <i class="icon upload" href="/indexskill"></i> Back</button>
+    </form>
+
+</div>
+
+<% include ../partials/footer %>

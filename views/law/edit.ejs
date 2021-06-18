@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+   
+   <a class="header item"><i class="code icon"></i>Law Rule for Women</a>
+   <a href="/" class="item">Home</a>
+   <a href="/indexlaw/new" class="item">New Post</a>
+   </div>
+</div>
+<div class="ui main text container segment">
+  <div class="ui huge header">Edit <%= law.title %></div>
+   
+    <form class="ui form" action="/indexlaw/<%= law._id %>?_method=PUT" method="POST">
+        <div class="field">
+        <label>Title</label>
+        <input type="text" name="law[title]" value="<%= law.title %>">    
+        </div> 
+        <div class="field">
+        <label>Detail Discussion</label>
+        <textarea name="law[body]"><%= law.body %></textarea>
+        </div>
+        <button class="ui green  basic button">
+        <i class="icon upload"></i> UPDATE</button>
+          
+    </form>
+
+</div>
+
+<% include ../partials/footer %>

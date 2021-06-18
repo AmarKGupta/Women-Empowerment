@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+<div class="container">
+<header class="jumbotron">
+    <div class="container">
+    <h1>Welcome to the Marketplace of Art & Craft</h1>
+    <p>View our hand-picked crafts from all over the world</p>
+    <a class="btn btn-primary btn-lg" href="/index/new">Add Product</a>
+    </div>
+</header>
+
+<div class="row text-centre" style="display:flex; flex-wrap: wrap;">
+<%campgrounds.forEach(function(campground){ %>
+
+
+     <div class="col-md-3 col-sm-6">
+         <figure class="figure">
+         <img src="<%= campground.image %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+         <figcaption class="figure-caption center-block"><%= campground.name %></figcaption>
+         
+          <a href="/index/<%=campground._id%>"class="btn btn-primary btn-sm">Read More</a>
+         </figure>
+         
+        <!-- <div class="thumbnail">
+         <img src="">
+         
+         <div class="caption">
+         <h3><strong></strong></h3>
+         </div>-->
+        
+     </div>   
+
+
+<%});%>
+</div>
+</div>
+<% include ../partials/footer %>

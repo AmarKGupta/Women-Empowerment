@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<div style="margin-top: 2em;" class="ui main text container">
+    <div class="ui huge header">SKill SET </div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% skills.forEach(function(skill) { %>
+            <div class="item">
+                
+                    <iframe width="360" height="270"
+                    src="<%= skill.video %>">
+                   </iframe>
+                
+                
+                <div class="content">
+                        <a class="header" href="/indexskill/<%= skill._id %>"><%= skill.title %></a>
+                   <div class="meta">
+                       <span><%= skill.created.toDateString() %></span>
+                   </div>
+                   <div class="description">
+                       <p><%- skill.body.substring(0,100) %>...</p>
+                   </div>
+                   <div class="extra">
+                       <a class="ui basic blue button floated" href="/indexskill/<%=skill._id %>">
+                           Know More
+                           <i class="right chevron icon"></i>
+                       </a>
+                   </div>
+               </div>
+           </div>
+        <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

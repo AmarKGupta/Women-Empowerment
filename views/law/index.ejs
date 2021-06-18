@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+ <!--<div style="margin-top: 7em; ">
+<div style=" margin-top: 4em;background-color: lightsteelblue; " class="ui fixed inverted menu">
+    <div class="ui container">
+     
+     <a class="header item" >Law Site site</a>
+     <a href="/" class="item">Home</a>
+     <a href="/indexlaw/new" class="item">Add a law</a>
+     </div>
+ </div>
+<h1>This is the Index Page</h1>
+
+<% laws.forEach(function(law){ %>
+   <div>
+      <h2><%= law.title %></h2>
+      
+       <span><%= law.created.toDateString() %></span>
+       <p><%= law.body.substring(0,100) %>...</p>
+       <a href="/indexlaw/<%=law._id %>"><button class="ui purple basic button">Read More</button></a>
+       
+   </div>
+    
+        
+<% }) %>
+</div> -->
+
+
+
+
+<div style="margin-top: 2em;" class="ui main text container">
+    <div class="ui huge header">Law & Order</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% laws.forEach(function(law) { %>
+            <div class="item">
+                <!-- <div class="image">
+                    <img src="<%= law.image %>">
+                </div> -->
+                <div class="content">
+                        <a class="header" href="/indexlaw/<%= law._id %>"><%= law.title %></a>
+                   <div class="meta">
+                       <span><%= law.created.toDateString() %></span>
+                   </div>
+                   <div class="description">
+                       <p><%- law.body.substring(0,100) %>...</p>
+                   </div>
+                   <div class="extra">
+                       <a class="ui basic blue button floated" href="/indexlaw/<%= law._id %>">
+                           Know More
+                           <i class="right chevron icon"></i>
+                       </a>
+                   </div>
+               </div>
+           </div>
+        <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

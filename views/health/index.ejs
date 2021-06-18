@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+
+
+
+
+
+<div style="margin-top: 2em;"class="ui main text container">
+    <div class="ui huge header" style="text-align: center;">Health app</div>
+    <div class="ui top attached segment"  style="border:darkcyan 2px solid ; ">
+        <div class="ui divided items">
+            <% healths.forEach(function(health){ %>
+            <div class="item" >
+                
+                <div class="content" style="text-align:center">
+                        <a class="header" href="/indexhealth/<%= health._id %>"><%= health.title %></a>
+                   <div class="meta">
+                       <span><%= health.created.toDateString() %></span>
+                   </div>
+                   <div class="image">
+                    <img src="<%= health.image %>" display: block;
+                    margin-left: auto;
+                    margin-right: auto; width="300" height="200">
+                </div>
+                   <div class="description" style="font-size: medium;">
+                       <p><%- health.body.substring(0,100) %>...</p>
+                   </div>
+                   <div class="extra">
+                       <a class="ui basic blue button floated" href="/indexhealth/<%= health._id %>">
+                           Read More
+                           <i class="right chevron icon"></i>
+                       </a>
+                   </div>
+               </div>
+           </div>
+        <% }); %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

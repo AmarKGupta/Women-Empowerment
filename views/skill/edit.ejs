@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+   
+   <a class="header item">Learn New Skill</a>
+   <a href="/" class="item">Home</a>
+   <a href="/indexskill/new" class="item">New Video</a>
+   </div>
+</div>
+<div class="ui main text container segment">
+  <div class="ui huge header">Edit <%= skill.title %></div>
+   
+    <form class="ui form" action="/indexskill/<%= skill._id %>?_method=PUT" method="POST">
+        <div class="field">
+        <label>Title</label>
+        <input type="text" name="skill[title]" value="<%= skill.title %>">    
+        </div> 
+        <div class="field">
+          <label>Video</label>
+           <input type="text" name="skill[image]" value="<%= skill.video %>">
+          </div>
+        <div class="field">
+        <label>Detaill Discussion</label>
+        <textarea name="skill[body]"><%= skill.body %></textarea>
+        </div>
+        <button class="ui green  basic button">
+        <i class="icon upload"></i> UPDATE</button>
+          
+    </form>
+
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Laws tips</div>
+   
+    <form class="ui form" action="/indexlaw" method="POST">
+        <div class="field">
+        <label>Title</label>
+        <input type="text" name="law[title]" placeholder="title">    
+        </div> 
+        <div class="field">
+        <label>Law Content</label>
+        <textarea name="law[body]"></textarea>
+        </div>
+        <button class="ui blue  basic button">
+        <i class="icon upload"></i> Post</button>
+        <button class="ui green   basic button">
+          <i class="icon upload" href="/indexlaw"></i> Back</button>
+    </form>
+
+</div>
+
+<% include ../partials/footer %>
